@@ -1,11 +1,18 @@
 %h3 Repositories
-- @repositories.each do |repository|
-  %div
-    = repository.name
-  %div
-    = repository.description
-  %div
-    = repository.user.full_name
-  %br
-  %br
-  %br
+= label_tag :search_repository, "Search"
+= text_field_tag :search_repository
+.repository-group
+  - @repositories.each do |repository|
+    .repository-item
+      .name
+        = repository.name
+      .description
+        = repository.description
+      %div
+        = repository.user.full_name
+      %div
+        = link_to "Edit", edit_repository_path(repository)
+        = link_to "Delete", repository_path(repository), method: :delete, data: { confirm: "Are you sure?" }
+      %br
+      %br
+      %br

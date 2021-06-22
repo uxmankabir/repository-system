@@ -1,0 +1,18 @@
+= form_with model: repository do |form|
+  %div
+    = form.label :name
+    %br
+    = form.text_field :name
+
+  %div
+    = form.label :description
+    %br
+    = form.text_area :description
+
+  %div
+    = form.label :user_id, "Repository Owner"
+    %br
+    = form.select :user_id, User.all.collect{|user| [user.full_name, user.id]}
+
+  %div
+    = form.submit

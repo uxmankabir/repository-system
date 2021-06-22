@@ -11,6 +11,11 @@
   </head>
 
   <body>
+    <%= link_to 'All Repositories', repositories_path %>
+    <%= link_to 'New Repository', new_repository_path %>
+
+    <%= link_to 'All Users', users_path %>
+    <%= link_to 'New User', new_user_path %>
     <%= yield %>
   </body>
 </html>
