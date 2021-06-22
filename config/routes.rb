@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   resources :repositories
   resources :users
 
-  root "repositories#index"
+  root "users#index"
 end

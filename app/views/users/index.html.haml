@@ -1,0 +1,14 @@
+%h3 Users
+- @users.each do |user|
+  %div
+    = user.first_name
+  %div
+    = user.last_name
+  %div
+    = user.email
+  %div
+    = link_to "Edit", edit_user_path(user)
+    = link_to "Delete", user_path(user), method: :delete, data: { confirm: "Are you sure?" }
+    %br
+    %br
+    %br

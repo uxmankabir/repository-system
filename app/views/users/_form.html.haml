@@ -1,0 +1,18 @@
+= form_with model: user do |form|
+  %div
+    = form.label :first_name
+    %br
+    = form.text_field :first_name
+
+  %div
+    = form.label :last_name
+    %br
+    = form.text_field :last_name
+
+  %div
+    = form.label :email
+    %br
+    = form.email_field :email
+
+  %div
+    = form.submit
