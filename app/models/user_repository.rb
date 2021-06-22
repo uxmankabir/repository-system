@@ -1,2 +1,0 @@
-class UserRepository < ApplicationRecord
-end

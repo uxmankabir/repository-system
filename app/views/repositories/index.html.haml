@@ -1,0 +1,11 @@
+%h3 Repositories
+- @repositories.each do |repository|
+  %div
+    = repository.name
+  %div
+    = repository.description
+  %div
+    = repository.user.full_name
+  %br
+  %br
+  %br
